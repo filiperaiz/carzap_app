@@ -1,0 +1,173 @@
+<ion-view view-title="{{myTitle}}" ng-controller="AnuncioCtrl">
+  <ion-nav-buttons side="right">
+
+    <a class="button button-clear button-calculate" ng-click="openModalSimulacao()">
+      <i class="ion-ios-calculator"></i>
+    </a>
+    <a class="button button-clear button-share" ng-click="shareAnuncio()">
+      <i class="ion-android-share-alt"></i>
+    </a>
+  </ion-nav-buttons>
+  <ion-content class="listaCarros anuncio">
+    <span class="label-fotos">PROMOÇÃO</span>
+    <slick dots="true"
+      fade="true"
+      arrows="false"
+      infinite="false"
+      speed="600"
+      slides-to-show="1"
+      touch-move="true"
+      slides-to-scroll="1">
+      <img ng-repeat="image in car.images" src="{{ image.url }}" height="250">
+    </slick>
+
+    <div class="item itemInformacoes">
+      <h2 class="itemTitulo">
+        {{car.title}}
+      </h2>
+    </div>
+    <span class="itemValor">
+      R$ {{car.price}}
+    </span>
+    <div class="anuncioDescricao">
+      <div class="card">
+        <div class="item">
+          <div class="box-icon">
+            <img src="img/icones/i-marca.png" />
+          </div>
+          <strong>
+            Marca:
+          </strong>
+          <span>{{car.mark}}</span>
+        </div>
+        <div class="item itemModel">
+          <div class="box-icon">
+            <img src="img/icones/i-modelo.png" />
+          </div>
+          <strong>
+            Modelo:
+          </strong>
+          <span>{{car.model}}</span>
+        </div>
+        <div class="item">
+          <div class="box-icon">
+            <img src="img/icones/i-ano.png" />
+          </div>
+          <strong>
+            Ano/Modelo:
+          </strong>
+          <span>{{car.year}}</span>
+        </div>
+        <div class="item">
+          <div class="box-icon">
+            <img src="img/icones/i-porta.png" />
+          </div>
+          <strong>
+            Portas:
+          </strong>
+          <span>{{car.port}}</span>
+        </div>
+        <div class="item">
+          <div class="box-icon">
+            <img src="img/icones/i-color.png" />
+          </div>
+          <strong>
+            Cor:
+          </strong>
+          <span>{{car.color}}</span>
+        </div>
+        <div class="item">
+          <div class="box-icon">
+            <img src="img/icones/i-gasolina.png" />
+          </div>
+          <strong>
+            Combustível:
+          </strong>
+          <span>{{car.gasoline}}</span>
+        </div>
+        <div class="item">
+          <div class="box-icon">
+            <img src="img/icones/i-km.png" />
+          </div>
+          <strong>
+            Quilometragem:
+          </strong>
+          <span>{{car.km}}</span>
+        </div>
+        <div class="item">
+          <div class="box-icon">
+            <img src="img/icones/i-placa.png" />
+          </div>
+          <strong>
+            Placa:
+          </strong>
+          <span>{{car.plate}}</span>
+        </div>
+      </div>
+
+      <div class="boxItem card">
+        <h4 class="boxItem-titulo">
+          Acessorios <strong>opcionais</strong>
+        </h4>
+        <div class="list">
+          <div class="item">
+            <i class="ion-android-checkbox-outline"></i>
+            <span>
+              Ar-condicionado
+            </span>
+          </div>
+          <div class="item">
+            <i class="ion-android-checkbox-outline"></i>
+            <span>
+              Travas elétricas
+            </span>
+          </div>
+          <div class="item">
+            <i class="ion-android-checkbox-outline"></i>
+            <span>
+              Alarme
+            </span>
+          </div>
+          <div class="item">
+            <i class="ion-android-checkbox-outline"></i>
+            <span>
+              Direção Hidraulica
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="boxItem mais-informacoes card">
+        <h4 class="boxItem-titulo">
+          Mais <strong>informações</strong>
+        </h4>
+        <div class="list">
+
+            <div class="item itemModel">
+              <img src="img/i-cartao.png" />
+              <span>
+                Pague a entrada com cartão de crédito
+              </span>
+            </div>
+
+            <div class="item">
+              <img src="img/i-troca.png" />
+              <span>
+                Aceitamos seu usado na troca
+              </span>
+            </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </ion-content>
+
+  <!-- Botão Eu quero -->
+  <button type="button" class="button button-block button-eu-quero" ng-click="openModalEuquero()">
+    <i class="ion-social-whatsapp-outline"></i>
+    <span>Eu quero</span>
+  </button>
+
+</ion-view>

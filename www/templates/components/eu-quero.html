@@ -1,0 +1,77 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-dark">
+
+    <h1 class="title">Eu quero</h1>
+
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeModalEuquero()">
+        <i class="ion-close-round"></i>
+      </button>
+    </div>
+
+  </ion-header-bar>
+  <ion-content class="modalEuquero">
+    <form ng-submit="doProposal()">
+      <div class="list card">
+        <label class="item item-input">
+          <span class="input-label proposta">
+            <i class="icon-proposta">R$</i>
+            <small>Proposta</small>
+          </span>
+          <input type="number">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">
+            <i class="ion-person"></i>
+            <small>Nome</small>
+          </span>
+          <input type="text">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">
+            <i class="ion-ios-email"></i>
+            <small>Email</small>
+          </span>
+          <input type="text">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">
+            <i class="ion-social-whatsapp"></i>
+            <small>Whatsapp</small>
+          </span>
+          <input type="text">
+        </label>
+
+        <label class="item item-radio">
+          <input type="checkbox" name="group">
+          <div class="item-content">
+            Quero Financiar
+          </div>
+          <i class="radio-icon ion-android-radio-button-off"></i>
+        </label>
+
+        <label class="item item-radio">
+          <input type="checkbox" name="group">
+          <div class="item-content">
+            Quero Avaliar Meu Usado
+          </div>
+          <i class="radio-icon ion-android-radio-button-off"></i>
+        </label>
+
+        <label class="item item-textarea">
+          <span class="input-label">
+            <small>Mensagem</small>
+          </span>
+          <textarea rows="" cols="" placeholder="Descreva aqui sua proposta"></textarea>
+        </label>
+
+        <label class="item send">
+          <button class="button button-block button-positive button-send" type="submit">ENVIAR</button>
+        </label>
+
+
+      </div>
+    </form>
+
+  </ion-content>
+</ion-modal-view>

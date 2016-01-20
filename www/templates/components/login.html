@@ -1,0 +1,66 @@
+<ion-modal-view ng-controller="LoginCtrl">
+  <ion-header-bar class="bar-dark">
+    <h1 class="title">Acesse sua conta</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeModalLogin()">
+        <i class="ion-close-round"></i>
+      </button>
+    </div>
+  </ion-header-bar>
+  <ion-content class="loginForm">
+    <form ng-submit="doLogin()">
+      <div class="list card">
+        <label class="item item-input">
+          <span class="input-label">
+            <i class="ion-ios-email"></i>
+            <small>Email</small>
+          </span>
+          <input type="text" ng-model="loginData.username">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">
+            <i class="ion-locked"></i>
+            <small>Senha</small>
+          </span>
+          <input type="password" ng-model="loginData.password">
+        </label>
+        <label class="item send">
+          <button class="button button-block button-positive button-send" type="submit" ng-click="goApp()">ENTRAR</button>
+        </label>
+
+        <button type="button" class="button button-perdi-senha" ng-click="recuperarSenha()">Esqueceu sua senha?</button>
+
+      </div>
+    </form>
+
+    <div class="recuperar-senha">
+      <div class="card">
+        <small class="info">
+          Digite seu e-mail no formulário abaixo. Vamos enviar as instruções para o seu e-mail de como recuperar sua senha.
+        </small>
+        <label class="item item-input">
+          <span class="input-label">
+            <i class="ion-locked"></i>
+            <small>E-mail</small>
+          </span>
+          <input type="text">
+        </label>
+        <label class="item send">
+          <button class="button button-block button-positive button-send" type="submit" ng-click="">RECUPERAR</button>
+        </label>
+
+        <button type="button" class="button button-clear" ng-click="closeRecuperar()">
+          <i class="ion-android-arrow-back"></i>
+          <span>VOLTAR</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="item itemCadastro">
+      <small>Ainda não tem uma conta?</small>
+      <button type="button" class="button button-cadastro" ng-click="openModalCadastro()">
+        Cadastre-se
+      </button>
+    </div>
+  </ion-content>
+</ion-modal-view>

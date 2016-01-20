@@ -1,0 +1,48 @@
+<ion-view view-title="{{myTitle}}" ng-controller="HomeCtrl">
+  <ion-nav-buttons side="right">
+    <a class="button button-clear button-filter" ng-click="openModalBusca()">
+      <i class="ion-ios-search-strong"></i>
+    </a>
+  </ion-nav-buttons>
+  <ion-content class="listaCarros" ng-controller="ListCarsCtrl">
+    <div ng-repeat="car in cars" class="card">
+
+        <figure class="item item-divider">
+          <button type="button" class="button-star">
+            <i class="ion-ios-star-outline"></i>
+          </button>
+          <a ui-sref="app.anuncio">
+            <img src="{{car.image}}" width="100%" alt="" />
+          </a>
+
+          <span class="itemValor">
+            R$ {{car.price}}
+          </span>
+
+        </figure>
+        <div class="item item-text-wrap">
+          <a ui-sref="app.anuncio">
+            <h2 class="itemTitulo">
+              {{car.title}}
+            </h2>
+            <div class="itemDescricao">
+              <span>
+                {{car.year}}
+              </span>
+              <span>
+                {{car.km}}
+              </span>
+              <span>
+                {{car.color}}
+              </span>
+            </div>
+          </a>
+        </div>
+    </div>
+
+    <div class="loading">
+      <img src="img/loading.gif" width="32" />
+    </div>
+
+  </ion-content>
+</ion-view>

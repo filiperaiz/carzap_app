@@ -1,0 +1,35 @@
+<ion-view view-title="Anúncios Favoritos">
+  <ion-content class="listaCarros favoritos" ng-controller="ListCarsCtrl">
+    <div ng-repeat="car in cars" class="card">
+      <a ui-sref="app.anuncio">
+        <figure class="item item-divider">
+          <button type="button" class="button-star">
+            <i class="ion-ios-star"></i>
+          </button>
+          <img src="{{car.image}}" width="100%" alt="" />
+
+          <span class="itemValor">
+            R$ {{car.price}}
+          </span>
+
+        </figure>
+        <div class="item item-text-wrap">
+          <h2 class="itemTitulo">
+            {{car.title}}
+          </h2>
+          <div class="itemDescricao">
+            <span>
+              {{car.year}}
+            </span>
+            <span>
+              {{car.km}}
+            </span>
+            <span>
+              {{car.color}}
+            </span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </ion-content>
+</ion-view>

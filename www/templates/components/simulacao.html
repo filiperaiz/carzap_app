@@ -1,0 +1,47 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-dark">
+
+    <h1 class="title">Simule seu financiamento</h1>
+
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeModalSimulacao()">
+        <i class="ion-close-round"></i>
+      </button>
+    </div>
+
+  </ion-header-bar>
+  <ion-content class="modalSimulacao">
+    <div class="list list-inset itemBusca">
+      <label class="item item-input">
+        <i class="icon-simulacao">R$</i>
+        <input type="number" placeholder="Entrada desejada">
+      </label>
+    </div>
+    <div class="simulacaoValores card">
+      <strong>SEM ENTRADA</strong>
+      <header class="row">
+        <div class="col col-20">Nº</div>
+        <div class="col col-80">VALOR</div>
+      </header>
+      <div class="row">
+        <div class="col col-20">24</div>
+        <div class="col col-80">R$ 8.233,35</div>
+      </div>
+      <div class="row">
+        <div class="col col-20">36</div>
+        <div class="col col-80">R$ 8.233,35</div>
+      </div>
+      <div class="row">
+        <div class="col col-20">48</div>
+        <div class="col col-80">R$ 8.233,35</div>
+      </div>
+      <div class="row">
+        <div class="col col-20">60</div>
+        <div class="col col-80">R$ 8.233,35</div>
+      </div>
+    </div>
+    <small class="simulacaoInfo">
+      * Os valores acima demonstram uma simulação do financiamento do veículo podendo haver variações na hora da contratação.
+    </small>
+  </ion-content>
+</ion-modal-view>

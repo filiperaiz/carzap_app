@@ -1,0 +1,57 @@
+<ion-view view-title="Meus Anúncios">
+  <ion-content class="meusAnuncios" ng-controller="MeusAnunciosListCtrl">
+    <div ng-repeat="car in cars" class="card">
+
+        <figure class="item item-divider">
+          <span class="label {{ car.status }}">{{ car.status }}</span>
+          <a ui-sref="app.anuncio">
+            <img src="{{car.image}}" width="100%" alt="" />
+          </a>
+
+          <span class="itemValor">
+            <div class="itemDados">
+              <span class="visualizacoes">
+                <i class="ion-eye"></i>
+                223
+              </span>
+              <span class="propostas">
+                <i class="ion-social-usd"></i>
+                0
+              </span>
+            </div>
+            <button type="button" class="button button-edit button-small" ng-click="openModalAnuncio()">
+              <i class="ion-edit"></i>
+            </button>
+            <button type="button" class="button button-delete button-small">
+              <i class="ion-android-close"></i>
+            </button>
+          </span>
+
+        </figure>
+        <div class="item item-text-wrap">
+          <h2 class="itemTitulo">
+            {{car.title}}
+          </h2>
+          <div class="itemDescricao">
+            <strong>
+              Placa:
+            </strong>
+            <span>
+              {{ car.plate }}
+            </span>
+            <strong>
+              Cadastrado em:
+            </strong>
+            <span>
+              {{ car.published }}
+            </span>
+          </div>
+        </div>
+    </div>
+
+    <div class="loading">
+      <img src="img/loading.gif" width="32" />
+    </div>
+
+  </ion-content>
+</ion-view>

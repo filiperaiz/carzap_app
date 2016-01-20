@@ -1,0 +1,12 @@
+{
+  "name": "carzap-app",
+  "app_id": "7e114cd0",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}

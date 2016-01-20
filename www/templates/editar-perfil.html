@@ -1,0 +1,109 @@
+<ion-view view-title="Editar Perfil" ng-controller="EditarPerfilCtrl">
+  <ion-content class="editarPerfil">
+    <div class="card">
+      <form ng-submit="doEditProfile()">
+        <div class="list">
+          <div class="item item-divider">
+            Dados Pessoais
+          </div>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Nome completo</span>
+            <input type="text" placeholder="João Guilherme Batista da Silva">
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">CPF</span>
+            <input type="text" placeholder="012.123.451-35">
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">R.G</span>
+            <input type="text" placeholder="3.216.126">
+          </label>
+          <div class="item item-input item-stacked-label">
+            <span class="input-label">Telefone(s)</span>
+            <div class="item-phone">
+              <div class="numero">
+                <strong>TIM</strong>
+                <span>(86) 9999 - 999</span>
+
+                <button type="button" class="button button-remove-phone">
+                  <i class="ion-close-round"></i>
+                </button>
+              </div>
+              <div class="numero">
+                <strong>CLARO</strong>
+                <span>(86) 9999 - 999</span>
+
+                <button type="button" class="button button-remove-phone">
+                  <i class="ion-close-round"></i>
+                </button>
+              </div>
+            </div>
+            <button type="button" class="button button-add-phone button-positive button-small" ng-click="addPhone()">
+              Adicionar Telefone
+            </button>
+          </div>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Data de Nascimento</span>
+            <input type="date" placeholder="21/02/1990">
+          </label>
+          <div class="item item-divider">
+            Endereço
+          </div>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Cep</span>
+            <input type="text" placeholder="64023-333">
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Logradouro</span>
+            <input type="text" placeholder="Rua Rodrigues Alves">
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Número</span>
+            <input type="text" placeholder="2049">
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Complemento</span>
+            <input type="text" placeholder="">
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Bairro</span>
+            <input type="text" placeholder="Morada Nova">
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Estado</span>
+            <input type="text" placeholder="Piauí">
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Cidade</span>
+            <input type="text" placeholder="Teresina">
+          </label>
+          <div class="item item-divider">
+            Conta
+          </div>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Usuário</span>
+            <input type="text" placeholder="Carzap">
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">E-mail</span>
+            <input type="text" placeholder="carzap@carzap.com.br">
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Senha</span>
+            <input type="password" placeholder="senha">
+          </label>
+          <div class="item send footer-editar">
+            <div class="row">
+              <div class="col-50">
+                <button class="button button-block button-default" type="submit">CANCELAR</button>
+              </div>
+              <div class="col-50">
+                <button class="button button-block button-positive button-send" type="submit">SALVAR</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,102 @@
+<ion-modal-view ng-controller="PesquisarCtrl">
+  <ion-header-bar class="bar-dark">
+
+    <h1 class="title">Faça uma Pesquisa</h1>
+
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeModalBusca()">
+        <i class="ion-close-round"></i>
+      </button>
+    </div>
+
+  </ion-header-bar>
+  <ion-content class="modalBusca">
+    <div class="card">
+      <form ng-submit="doPesquisa()">
+        <div class="row">
+          <div class="col-30">
+            <label class="item item-radio">
+              <input type="radio" name="group">
+              <div class="item-content">
+                Novo
+              </div>
+              <i class="radio-icon ion-android-radio-button-off"></i>
+            </label>
+          </div>
+          <div class="col-30">
+            <label class="item item-radio">
+              <input type="radio" name="group">
+              <div class="item-content">
+                Usado
+              </div>
+              <i class="radio-icon ion-android-radio-button-off"></i>
+            </label>
+          </div>
+        </div>
+        <div class="list list-inset itemBusca">
+          <label class="item item-input">
+            <i class="icon ion-android-car placeholder-icon"></i>
+            <input type="text" placeholder="Nome ou a marca do carro">
+          </label>
+        </div>
+
+        <div class="item item-dropdown item-icon-right" ng-click="dropdownMarca()">
+          Marca
+          <i class="icon ion-ios-arrow-down"></i>
+        </div>
+
+        <div class="item item-dropdown item-icon-right" ng-click="dropdownModelo()" disabled>
+          Modelo
+          <i class="icon ion-ios-arrow-down"></i>
+        </div>
+
+        <label class="item item-input">
+          <span class="input-label proposta">
+            <i class="icon-proposta">R$</i>
+            <small>Valor Mínimo</small>
+          </span>
+          <input type="number">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label proposta">
+            <i class="icon-proposta">R$</i>
+            <small>Valor Máximo</small>
+          </span>
+          <input type="number">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label proposta">
+            <i class="icon ion-calendar  placeholder-icon"></i>
+            <small>Ano Modelo</small>
+          </span>
+          <input type="number">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label proposta">
+            <i class="icon ion-calendar  placeholder-icon"></i>
+            <small>Ano Fabricação</small>
+          </span>
+          <input type="number">
+        </label>
+
+        <div class="item item-dropdown item-icon-right" ng-click="dropdownEstado()">
+          Estado
+          <i class="icon ion-ios-arrow-down"></i>
+        </div>
+
+        <div class="item item-dropdown item-icon-right" ng-click="dropdownCidade()" disabled>
+          Cidade
+          <i class="icon ion-ios-arrow-down"></i>
+        </div>
+
+        <label class="item send">
+          <button class="button button-block button-positive button-send" type="submit">BUSCAR</button>
+        </label>
+
+      </form>
+    </div>
+  </ion-content>
+</ion-modal-view>

@@ -1,0 +1,175 @@
+<ion-modal-view ng-controller="NovoAnuncioCtrl">
+  <ion-header-bar class="bar-dark">
+
+    <h1 class="title">Novo anúncio</h1>
+
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeModalAnuncio()">
+        <i class="ion-close-round"></i>
+      </button>
+    </div>
+
+  </ion-header-bar>
+  <ion-content class="modalAnuncio">
+    <div class="card">
+      <form ng-submit="doAnuncio()">
+        <div class="item item-divider">
+          Detalhes do carro
+        </div>
+        <div class="novo-usado row">
+          <div class="col-30">
+            <label class="item item-radio">
+              <input type="radio" name="group">
+              <div class="item-content">
+                Novo
+              </div>
+              <i class="radio-icon ion-android-radio-button-off"></i>
+            </label>
+          </div>
+          <div class="col-30">
+            <label class="item item-radio">
+              <input type="radio" name="group">
+              <div class="item-content">
+                Usado
+              </div>
+              <i class="radio-icon ion-android-radio-button-off"></i>
+            </label>
+          </div>
+        </div>
+
+        <div class="item item-dropdown item-icon-right" ng-click="dropdownMarca()">
+          Marca
+          <i class="icon ion-ios-arrow-down"></i>
+        </div>
+
+        <div class="item item-dropdown item-icon-right" ng-click="dropdownModelo()" disabled>
+          Modelo
+          <i class="icon ion-ios-arrow-down"></i>
+        </div>
+
+        <label class="item item-input">
+          <span class="input-label proposta">
+            <i class="icon ion-calendar  placeholder-icon"></i>
+            <small>Ano Fabricação</small>
+          </span>
+          <input type="number">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label proposta">
+            <i class="icon ion-calendar  placeholder-icon"></i>
+            <small>Ano Modelo</small>
+          </span>
+          <input type="number">
+        </label>
+
+        <div class="item item-dropdown item-icon-right" ng-click="dropdownCombustivel()">
+          Combustível
+          <i class="icon ion-ios-arrow-down"></i>
+        </div>
+
+        <div class="item item-dropdown item-icon-right" ng-click="dropdownPortas()">
+          Portas
+          <i class="icon ion-ios-arrow-down"></i>
+        </div>
+
+        <div class="item item-dropdown item-icon-right" ng-click="dropdownCor()">
+          Cor
+          <i class="icon ion-ios-arrow-down"></i>
+        </div>
+
+        <label class="item item-input">
+          <span class="input-label proposta">
+            <small>Quilometragem</small>
+          </span>
+          <input type="number">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label proposta">
+            <i class="icon-proposta">R$</i>
+            <small>Preço</small>
+          </span>
+          <input type="number">
+        </label>
+
+        <div class="item item-divider">
+          Específicações
+        </div>
+
+        <label class="item item-input">
+          <span class="input-label proposta">
+            <small>Placa</small>
+          </span>
+          <input type="number">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label proposta">
+            <small>RENAVAM</small>
+          </span>
+          <input type="number">
+        </label>
+
+        <div class="item item-dropdown item-icon-right" ng-click="dropdownEstado()">
+          Estado
+          <i class="icon ion-ios-arrow-down"></i>
+        </div>
+
+        <div class="item item-dropdown item-icon-right" ng-click="dropdownCidade()" disabled>
+          Cidade
+          <i class="icon ion-ios-arrow-down"></i>
+        </div>
+
+        <div class="item item-input item-stacked-label">
+            <span class="input-label">Itens opcionais</span>
+            <div class="item-list">
+              <div class="list-item">
+                <strong>Ar condicionado</strong>
+                <button type="button" class="button button-remove-item">
+                  <i class="ion-close-round"></i>
+                </button>
+              </div>
+            </div>
+            <button type="button" class="button button-add-opcoes button-positive button-small" ng-click="addOpcoes()">
+              Adicionar
+            </button>
+          </div>
+
+          <label class="item item-textarea">
+            <span class="input-label">
+              <small>Observações</small>
+            </span>
+            <textarea rows="" cols="" placeholder="Descreva detalhes do carro"></textarea>
+          </label>
+
+          <div class="item item-divider">
+            Imagens do Carro
+          </div>
+
+          <label class="item item-input">
+            <button type="button" class="button button-add-opcoes button-positive button-small" ng-click="addImage()">
+              <i class="ion-images"></i>
+              <span>Adicionar</span>
+            </button>
+          </label>
+
+          <div class="item item-termos item-textarea">
+            <a href="#" ng-click="openTermos()">Termos de Uso</a>
+            <label class="item item-radio">
+              <input type="radio" name="group">
+              <div class="item-content">
+                Concordo com os termos
+              </div>
+              <i class="radio-icon ion-android-radio-button-off"></i>
+            </label>
+          </div>
+
+        <label class="item send">
+          <button class="button button-block button-positive button-send" type="submit">CADASTRAR</button>
+        </label>
+
+      </form>
+    </div>
+  </ion-content>
+</ion-modal-view>

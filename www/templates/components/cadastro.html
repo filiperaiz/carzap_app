@@ -1,0 +1,57 @@
+<ion-modal-view ng-controller="CadastroCtrl">
+  <ion-header-bar class="bar-dark">
+    <h1 class="title">Cadastro</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeModalCadastro()">
+        <i class="ion-close-round"></i>
+      </button>
+    </div>
+  </ion-header-bar>
+  <ion-content class="loginForm">
+     <form ng-submit="doRegister()">
+      <div class="list card">
+        <label class="item item-input">
+          <span class="input-label">
+            <i class="ion-ios-person"></i>
+            <small>Nome</small>
+          </span>
+          <input type="text" ng-model="loginData.username">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">
+            <i class="ion-ios-email"></i>
+            <small>Email</small>
+          </span>
+          <input type="text" ng-model="loginData.username">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">
+            <i class="ion-ios-person"></i>
+            <small>Usuário</small>
+          </span>
+          <input type="text" ng-model="loginData.username">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">
+            <i class="ion-locked"></i>
+            <small>Senha</small>
+          </span>
+          <input type="password" ng-model="loginData.password">
+        </label>
+
+        <label class="item item-radio">
+          <input type="radio" name="group">
+          <div class="item-content">
+            Desejo receber ofertas e promoções
+          </div>
+          <i class="radio-icon ion-android-radio-button-off"></i>
+        </label>
+
+        <label class="item send">
+          <button class="button button-block button-positive button-send" type="submit" ng-click="goApp()">CADASTRAR</button>
+        </label>
+
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>

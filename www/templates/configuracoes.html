@@ -1,0 +1,27 @@
+<ion-view view-title="Configurações" ng-controller="ConfiguracoesCtrl">
+  <ion-content class="configuracoes">
+    <div class="item item-dropdown item-icon-right" ng-click="editarPerfil()">
+      <span>Editar Perfil</span>
+      <i class="icon ion-ios-arrow-right"></i>
+    </div>
+    <div class="item item-dropdown item-icon-right">
+      <span>Notificações</span>
+      <label class="toggle toggle-positive">
+       <input type="checkbox">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+    </div>
+    <div class="item item-dropdown item-icon-left item-icon-right" ng-click="openModalAnuncio()">
+      <i class="ion-social-usd"></i>
+      <span>Novo anúncio</span>
+      <i class="icon ion-ios-arrow-right"></i>
+    </div>
+    <div class="item item-dropdown item-icon-left item-icon-right" ng-click="meusAnuncios()">
+      <i class="ion-android-car"></i>
+      <span>Meus anúncios</span>
+      <i class="icon ion-ios-arrow-right"></i>
+    </div>
+  </ion-content>
+</ion-view>
