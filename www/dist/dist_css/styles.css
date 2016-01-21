@@ -10912,3 +10912,6 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 
 .show-recuperar-senha .itemCadastro, .show-recuperar-senha .loginForm form {
   display: none; }
+
+.platform-android .action-sheet .action-sheet-title, .platform-android .action-sheet .button {
+  padding: 5px 15px; }
