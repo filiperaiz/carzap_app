@@ -2,7 +2,7 @@
 angular.module('carzap.controllers', [])
 
 //============ Controller: AppController ===//
-.controller('AppController', function($scope, $ionicModal, $ionicPopup, $timeout, $state) {
+.controller('AppController', ['$scope', '$ionicModal', '$ionicPopup', '$timeout', '$state', function($scope, $ionicModal, $ionicPopup, $timeout, $state) {
 
   $scope.myTitle = '<img class="title-image" src="img/logo.svg" width="88" />';
 
@@ -74,10 +74,10 @@ angular.module('carzap.controllers', [])
   };
 
 
-})
+}])
 
 //============ Controller: LoginController ===//
-.controller('LoginController', function($scope, $state, $ionicModal) {
+.controller('LoginController', ['$scope', '$state', '$ionicModal', function($scope, $state, $ionicModal) {
   $scope.recuperarSenha = function(){
     $('body').addClass('show-recuperar-senha');
   };
@@ -100,13 +100,13 @@ angular.module('carzap.controllers', [])
   $scope.goApp = function(){
     $state.go('app.home');
   };
-})
+}])
 
 //============ Controller: CadastroController ===//
-.controller('CadastroController', function($scope, $state) {})
+.controller('CadastroController', ['$scope', '$state', function($scope, $state) {}])
 
 //============ Controller: HomeController ===//
-.controller('HomeController', function($scope, $ionicModal) {
+.controller('HomeController', ['$scope', '$ionicModal', function($scope, $ionicModal) {
   $ionicModal.fromTemplateUrl('templates/components/pesquisar.html', {
     scope: $scope,
     animation: 'slide-in-up'
@@ -122,10 +122,10 @@ angular.module('carzap.controllers', [])
   $scope.$on('$destroy', function() {
     $scope.modalBusca.remove();
   });
-})
+}])
 
 //============ Controller: PesquisarController ===//
-.controller('PesquisarController', function($scope, $stateParams, $ionicPopup) {
+.controller('PesquisarController', ['$scope', '$stateParams', '$ionicPopup', function($scope, $stateParams, $ionicPopup) {
   $scope.dropdownMarca = function() {
    var alertPopup = $ionicPopup.alert({
      title: 'Escolha a marca',
@@ -154,10 +154,10 @@ angular.module('carzap.controllers', [])
    });
   };
 
-})
+}])
 
 //============ Controller: AnuncioController ===//
-.controller('AnuncioController', function($scope, $stateParams, $ionicActionSheet, $ionicModal, $timeout) {
+.controller('AnuncioController', ['$scope', '$stateParams', '$ionicActionSheet', '$ionicModal', '$timeout', function($scope, $stateParams, $ionicActionSheet, $ionicModal, $timeout) {
   // Dados Fictícios (Anúncio);
    $scope.car = {
     id: 1,
@@ -229,10 +229,10 @@ angular.module('carzap.controllers', [])
    }, 9000);
  };
 
-})
+}])
 
 //============ Controller: NovoAnuncioController ===//
-.controller('NovoAnuncioController', function($scope, $stateParams, $ionicPopup, $ionicModal, $cordovaCamera) {
+.controller('NovoAnuncioController', ['$scope', '$stateParams', '$ionicPopup', '$ionicModal', '$cordovaCamera', function($scope, $stateParams, $ionicPopup, $ionicModal, $cordovaCamera) {
 
   $scope.addImage = function (){
     var alertPopup = $ionicPopup.show({
@@ -361,10 +361,10 @@ angular.module('carzap.controllers', [])
   };
 
 
-})
+}])
 
 //============ Controller: ListCarsController ===//
-.controller('ListaCarrosController', function($scope, $stateParams) {
+.controller('ListaCarrosController', ['$scope', '$stateParams', function($scope, $stateParams) {
      // Dados Fictícios (Lista de Anúncio);
      $scope.cars = [
       {
@@ -404,30 +404,30 @@ angular.module('carzap.controllers', [])
         color: 'Preto'
       },
     ];
-})
+}])
 
 //============ Controller: EditarPerfilController ===//
-.controller('EditarPerfilController', function($scope, $ionicPopup) {
+.controller('EditarPerfilController', ['$scope', '$ionicPopup', function($scope, $ionicPopup) {
   $scope.addPhone = function() {
    var alertPopup = $ionicPopup.alert({
      title: 'Adicione um telefone',
      template: '<div class="row"><label class="item item-input item-stacked-label"><span class="input-label">Operadora</span><input type="text" placeholder="TIM"></label></div><div class="row"><div class="col-20"><label class="item item-input item-stacked-label"><span class="input-label">DDD</span><input type="number" placeholder="(86)"></label></div><div class="col-80"><label class="item item-input item-stacked-label"><span class="input-label">Telefone</span><input type="number" placeholder="9999 - 9999"></label></div></div>'
    });
   };
-})
+}])
 
 //============ Controller: ConfiguracoesController ===//
-.controller('ConfiguracoesController', function($scope, $state) {
+.controller('ConfiguracoesController', ['$scope', '$state', function($scope, $state) {
   $scope.editarPerfil = function(){
     $state.go('app.editar-perfil');
   };
   $scope.meusAnuncios = function(){
     $state.go('app.meus-anuncios');
   };
-})
+}])
 
 //============ Controller: MeusAnunciosListaControtroller ===//
-.controller('MeusAnunciosListaController', function($scope, $state, $stateParams, $ionicModal) {
+.controller('MeusAnunciosListaController', ['$scope', '$state', '$stateParams', '$ionicModal', function($scope, $state, $stateParams, $ionicModal) {
 
     // Adicionar Anuncio
     $ionicModal.fromTemplateUrl('templates/components/novo-anuncio.html', {
@@ -473,4 +473,4 @@ angular.module('carzap.controllers', [])
        status: 'aguardando',
        published: '19/01/2016, 10:35'
      }];
-});
+}]);

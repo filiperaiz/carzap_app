@@ -1,8 +1,11 @@
 {
-  "name": "carzap-app",
+  "name": "Carzap",
   "app_id": "7e114cd0",
   "gulpStartupTasks": [
     "sass",
+    "templatecache",
+    "ng_annotate",
+    "useref",
     "watch"
   ],
   "watchPatterns": [

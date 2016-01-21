@@ -1,7 +1,7 @@
 {
-  "name": "carzap-app",
+  "name": "Carzap",
   "version": "1.1.1",
-  "description": "carzap-app: An Ionic project",
+  "description": "Carzap: An Ionic project",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^2.0.4",
@@ -10,9 +10,18 @@
     "gulp-rename": "^1.2.0"
   },
   "devDependencies": {
+    "async": "^1.5.2",
     "bower": "^1.3.3",
+    "clean-css": "^3.4.9",
+    "cordova-uglify": "^0.2.3",
+    "gulp-angular-templatecache": "^1.8.0",
+    "gulp-ng-annotate": "^1.1.0",
+    "gulp-useref": "^3.0.4",
     "gulp-util": "^2.2.14",
-    "shelljs": "^0.3.0"
+    "jshint": "^2.9.1",
+    "mv": "^2.1.1",
+    "shelljs": "^0.3.0",
+    "uglify-js": "^2.6.1"
   },
   "cordovaPlugins": [],
   "cordovaPlatforms": [

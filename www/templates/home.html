@@ -1,10 +1,10 @@
-<ion-view view-title="{{myTitle}}" ng-controller="HomeCtrl">
+<ion-view view-title="{{myTitle}}" ng-controller="HomeController">
   <ion-nav-buttons side="right">
     <a class="button button-clear button-filter" ng-click="openModalBusca()">
       <i class="ion-ios-search-strong"></i>
     </a>
   </ion-nav-buttons>
-  <ion-content class="listaCarros" ng-controller="ListCarsCtrl">
+  <ion-content class="listaCarros" ng-controller="ListaCarrosController">
     <div ng-repeat="car in cars" class="card">
 
         <figure class="item item-divider">

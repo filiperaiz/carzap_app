@@ -2,7 +2,7 @@
 angular.module('carzap', ['ionic', 'slick', 'ngCordova', 'carzap.controllers', 'templates'])
 
 //============ Run Application ===//
-.run(function($ionicPlatform, $cordovaStatusbar) {
+.run(['$ionicPlatform', '$cordovaStatusbar', function($ionicPlatform, $cordovaStatusbar) {
   $ionicPlatform.ready(function() {
     if (window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
@@ -13,10 +13,10 @@ angular.module('carzap', ['ionic', 'slick', 'ngCordova', 'carzap.controllers', '
       $cordovaStatusBar.style(1);
     }
   });
-})
+}])
 
 //============ Config Application ===//
-.config(function($stateProvider, $urlRouterProvider) {
+.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
   $stateProvider
     // State: app //
     .state('app', {
@@ -118,4 +118,4 @@ angular.module('carzap', ['ionic', 'slick', 'ngCordova', 'carzap.controllers', '
       }
     });
   $urlRouterProvider.otherwise('/app/home');
-});
+}]);
